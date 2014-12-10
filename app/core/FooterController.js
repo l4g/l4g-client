@@ -1,0 +1,3 @@
+FooterController = function($scope)
+{
+}

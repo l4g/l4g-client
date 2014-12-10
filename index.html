@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html ng-app="core">
+<head>
+    <title ng-bind-template="L4G | {{application.title}}">Looking For Group</title>
+
+    <!-- Meta tags are important, we should add more. All the tags! TODO: Create a template and a service to manage this.-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="rating" content="general">
+    <meta name="fragment" content="!">
+    <meta name="description" content="Looking for a group?">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Style sheets. -->
+    <link rel="icon" href="assets/icons/favicon-lite.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/jquery.2.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div ng-include="'app/templates/header.html'"></div>
+    <div class="container col-sm-12">
+        <div id="content" class="col-sm-9 pull-left">
+            <div ui-view="main"></div>
+        </div>
+        <div id="sidebar" class="col-sm-3 pull-right">
+            <div ui-view="sidebar"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!-- And the Google said: Let there be javascript! -->
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/pages/home/HomeController.js"></script>
+    <script src="app/pages/games/GamesController.js"></script>
+
+    <!-- Core controllers for the base includes-->
+    <script src="app/core/HeaderController.js"></script>
+    <script src="app/core/FooterController.js"></script>
+    <script src="app/core/ContentController.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+$stateProvider.state('home', {
+
+})
