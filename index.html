@@ -20,7 +20,7 @@
 </head>
 <body>
     <div ng-include="'app/templates/header.html'"></div>
-    <div class="container col-sm-12">
+    <div class="container">
         <div id="content" class="col-sm-9 pull-left">
             <div ui-view="main"></div>
         </div>
@@ -36,6 +36,8 @@
     <script src="app/app.js"></script>
     <script src="app/pages/home/HomeController.js"></script>
     <script src="app/pages/games/GamesController.js"></script>
+    <script src="app/pages/auth/AuthController.js"></script>
+    <script src="app/pages/profile/ProfileController.js"></script>
 
     <!-- Core controllers for the base includes-->
     <script src="app/core/HeaderController.js"></script>
