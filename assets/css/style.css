@@ -6,3 +6,9 @@
 .container{
 	margin-top: 70px;
 }
+.navbar-inverse {
+	background-color: #204D74;
+}
+.navbar-inverse a{
+	color: #EEE;
+}
