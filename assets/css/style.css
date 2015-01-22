@@ -1,15 +1,14 @@
-.*{
-	margin:0px;
-	padding:0px;
-}
-.clear {clear:both;}
-.container{
-	margin-top: 70px;
-}
+.clear {
+  clear: both; }
+
+.container {
+  margin-top: 70px; }
+
 .navbar-inverse {
-	background-color: #204D74;
-	color: #EEE;
-}
-.navbar-inverse a{
-	color: #EEE;
-}
+  background-color: #204D74;
+  color: #EEE; }
+
+.navbar-inverse a {
+  color: nav-link-color; }
+
+/*# sourceMappingURL=style.css.map */

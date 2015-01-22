@@ -1,6 +1,13 @@
-$font-size: 12px;
-
-body {
-	color: #94a9bf;
-	font: $font-size;
+$background-color: #204D74;
+$nav-link-color: #EEE;
+.clear {clear:both;}
+.container{
+	margin-top: 70px;
+}
+.navbar-inverse {
+	background-color: $background-color;
+	color: $nav-link-color;
+}
+.navbar-inverse a{
+	color: nav-link-color;
 }
