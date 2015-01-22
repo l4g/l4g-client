@@ -1,0 +1,14 @@
+{
+  "name": "l4g-clinet",
+  "version": "0.0.1",
+  "main": "assets/css/style.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular": "~1.3.10",
+  },
+  "devDependencies": {
+  }
+}
