@@ -35,6 +35,13 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                 sidebar: {templateUrl: "app/pages/home/home-sidebar.html"}
             }
         })
+        .state('game', {
+            url: "/game",
+            views: {
+                main: {templateUrl: "app/pages/games/game.html"},
+                sidebar: {templateUrl: "app/pages/home/home-sidebar.html"}
+            }
+        })
         .state('profile', {
             url: "/profile",
             views: {

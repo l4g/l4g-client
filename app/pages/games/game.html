@@ -1,4 +1,11 @@
-<div>
-	<h1>Elite Dangerous</h1>
-	<p>add chat etc.</p>
+<div ng-controller="GameController">
+	<div class="row">
+		<div class="col-sm-12, col-md-3 pull-left">
+			<img src="{{game.picture}}" alt="{{profile.title}} picture">
+		</div>
+		<div class="col-sm-12 col-md-9">
+			<h1>{{game.title}}</h1>
+			<p>{{game.description}}</p>
+		</div>
+	</div>
 </div>
