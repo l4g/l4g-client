@@ -102,16 +102,26 @@ app.controller('GamesController', ['$scope', function($scope) {
 		}
 	];
 	$scope.queryGames = function() {
+		var g = $scope.fakeGames;
 		console.log("gtting games");
 		// Return the results based on the filter.
 		var r = [];
-		for(var i = 0; i < $scope.fakeGames.length; i++) {
+		for(var i = 0; i < g.length; i++) {
 			console.log("game: " + i);
 			//
-			if ($scope.filter.platform != null && $scope.fakeGames[i].platform != $scope.filter.platform) {
+			if ($scope.filter.platform != null) {
+				if(g[i].platforms.length > 0) {
+					for(var j = 0; j < g[i].platforms.length; j++) {
+						//
+						if (g[i].platforms[j] == $scope.filter.platform) {
+							//code
+							r.push(g[i]);
+						}
+					}
+				}
 				continue;
 			}
-			console.log("getting: {name}", $scope.fakeGames[i].name)
+			console.log("getting: {name}", g[i].name)
 			r.push($scope.fakeGames[i]);
 		}
 

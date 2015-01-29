@@ -5,10 +5,9 @@
   margin-top: 70px; }
 
 .navbar-inverse {
-  background-color: #204D74;
-  color: #EEE; }
+  background-color: #204D74; }
 
-.navbar-inverse a {
-  color: nav-link-color; }
+.navbar-inverse .navbar-nav > li > a {
+  color: #EEE; }
 
 /*# sourceMappingURL=style.css.map */

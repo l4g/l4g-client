@@ -6,8 +6,8 @@ $nav-link-color: #EEE;
 }
 .navbar-inverse {
 	background-color: $background-color;
-	color: $nav-link-color;
 }
-.navbar-inverse a{
-	color: nav-link-color;
+
+.navbar-inverse .navbar-nav>li>a{
+	color: $nav-link-color
 }
