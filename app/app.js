@@ -42,6 +42,13 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                 sidebar: {templateUrl: "app/pages/home/home-sidebar.html"}
             }
         })
+        .state('channel', {
+            url: "/channel/{id}",
+            views: {
+                main: {templateUrl: "app/pages/channel/channel.html"},
+                sidebar: {templateUrl: "app/pages/channel/channel-sidebar.html"}
+            }
+        })
         .state('profile', {
             url: "/profile",
             views: {
