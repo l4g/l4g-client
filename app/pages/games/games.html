@@ -16,10 +16,6 @@
         </div>
     </div>
     <div class="row">
-        <p>Total Number of Players:</p>
-        <p>Total Number of Rooms:</p>
-    </div>
-    <div class="row">
         <div ng-repeat="g in queryGames()" class="col-sm-6 col-md-4">
             <div class="thumbnail">
                 <a href="#">
@@ -29,7 +25,7 @@
                     <h3>{{g.name}}</h3>
                     <p>Rooms: {{g.rooms}}</p>
                     <p>Players: {{g.population}}</p>
-                    <p>Platform: {{g.platforms}}</p>
+                    <p>Platforms: <span class="label label-default" ng-repeat="p in g.platforms">{{p}}</span></p>
                     <p><a href="#" class="btn btn-primary" role="button">Select</a></p>
                 </div>
             </div>
