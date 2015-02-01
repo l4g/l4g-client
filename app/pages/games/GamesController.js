@@ -9,7 +9,6 @@ app.controller('GamesController', ['$scope', function($scope) {
 	 * request searching rather than bulk load and filter on the client.
 	 */
 	$scope.platforms = ["PS4", "PC", "Xbox One", "PS3", "Wii U", "Xbox 360"];
-	$scope.games = [];
 	$scope.fakeGames = [
 		{
 			name: "Diablo 3",
