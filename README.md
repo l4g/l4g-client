@@ -14,3 +14,6 @@ npm update
 bower install
 
 grunt default
+
+
+test
