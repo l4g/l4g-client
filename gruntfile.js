@@ -26,9 +26,18 @@ module.exports = function(grunt) {
           {
             dest: '.tmp/concat/js/app.js',
             src: [
-              'assets/js/*.js',
+              'assets/js/angular.js',
+              'assets/js/angular-ui-router.js',
               '<%= pkg.app %>/app.js',
-              '<%= pkg.app %>/pages/{,*/}*.js'
+              '<%= pkg.app %>/pages/{,*/}*.js',
+              '<%= pkg.app %>/core/{,*/}*.js'
+            ]
+          },{
+            dest: '.tmp/concat/js/head.js',
+            src: [
+              'assets/js/jquery.2.min.js',
+              'assets/js/jquery-ui.min.js',
+              'assets/js/bootstrap.min.js',
             ]
           }
         ]
@@ -49,16 +58,6 @@ module.exports = function(grunt) {
       css: ['<%= pkg.dist %>/assets/styles/{,*/}*.css'],
       options: {
         assetsDirs: ['<%= pkg.dist %>','<%= pkg.dist %>/images']
-      }
-    },
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'assets/icons',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= pkg.dist %>/images'
-        }]
       }
     },
     copy: {
@@ -84,13 +83,13 @@ module.exports = function(grunt) {
           src: ['index.html']
         },{
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= pkg.dist %>/images',
-          src: ['generated/*']
+          cwd: 'assets/icons/',
+          dest: '<%= pkg.dist %>/assets/icons',
+          src: ['*']
         }, {
           expand: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          cwd: 'assets/css',
+          src: 'bootstrap.min.css',
           dest: '<%= pkg.dist %>/assets/css'
         },{
           expand: true,
@@ -112,8 +111,14 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: '.tmp/concat/js/app.js',
-        dest: '<%= pkg.dist %>/<%= pkg.app %>/app.js'
+        files: [
+        {
+          src: '.tmp/concat/js/app.js',
+          dest: '<%= pkg.dist %>/<%= pkg.app %>/app.js'
+        },{
+          src: '.tmp/concat/js/head.js',
+          dest: '<%= pkg.dist %>/<%= pkg.app %>/head.js'
+        }]
       }
     },
     sass: {
@@ -140,7 +145,6 @@ module.exports = function(grunt) {
     'uglify',
     'sass',
     'usemin',
-    'imagemin'
   ]);
   //grunt.registerTask('default', ['sass']);
 };
