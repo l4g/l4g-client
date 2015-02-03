@@ -9,5 +9,8 @@
 
 .navbar-inverse .navbar-nav > li > a {
   color: #EEE; }
-.label { display: inline-block;}
+
+.label {
+  display: inline-block; }
+
 /*# sourceMappingURL=style.css.map */
