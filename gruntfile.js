@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           {
             dest: '.tmp/concat/js/app.js',
             src: [
-              'bower_components/{,*/}*.min.js',
+              'assets/js/*.js',
               '<%= pkg.app %>/app.js',
               '<%= pkg.app %>/pages/{,*/}*.js'
             ]
