@@ -83,7 +83,7 @@ app.controller('GamesController', ['$scope', function($scope) {
 			population: 1,
 			platforms: ["pc", "ps4", "xboxone"]
 		},{
-			name: "minecraft",
+			name: "Minecraft",
 			image: "",
 			description: "",
 			rooms: 2,
