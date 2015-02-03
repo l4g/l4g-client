@@ -29,6 +29,7 @@ module.exports = function(grunt) {
               'assets/js/angular.js',
               'assets/js/angular-ui-router.js',
               '<%= pkg.app %>/app.js',
+              '<%= pkg.app %>/services/{,*/}*.js',
               '<%= pkg.app %>/pages/{,*/}*.js',
               '<%= pkg.app %>/core/{,*/}*.js'
             ]
