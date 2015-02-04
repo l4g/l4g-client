@@ -2,6 +2,7 @@ l4g-client
 ==========
 
 The client side of l4g
+===
 
 npm install
 
@@ -14,6 +15,3 @@ npm update
 bower install
 
 grunt default
-
-
-test
